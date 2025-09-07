@@ -1,0 +1,31 @@
+{
+  "_id": "5c53c18a-53f3-4ef3-ab99-5afccccdbce1",
+  "amount": 234.30450974245898,
+  "billing_cycle": "Yearly",
+  "currency": "CAD",
+  "end_date": "2025-05-05",
+  "features": [
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": false,
+      "limit_value": 185
+    },
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": true,
+      "limit_value": 151
+    },
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": true,
+      "limit_value": 549
+    }
+  ],
+  "plan_name": "Starter",
+  "start_date": "2024-06-19",
+  "status": "Suspended",
+  "trial_end_date": "2025-03-17"
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "76eb4075-cd8b-428e-8299-d5e820d5c299",
+  "avatar": "https://images.unsplash.com/photo-1500000170168?w=800",
+  "email": "sample@demo.org",
+  "first_name": "Sample first_name for user",
+  "invited_at": "2025-05-09",
+  "is_active": false,
+  "last_login": "2024-06-03",
+  "last_name": "Sample last_name for user",
+  "preferences": {
+    "dashboard_layout": "comfortable",
+    "email_notifications": false,
+    "language": "en",
+    "theme": "dark"
+  },
+  "role": "Admin"
+}

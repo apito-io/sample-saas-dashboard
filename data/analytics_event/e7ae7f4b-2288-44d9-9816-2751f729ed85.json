@@ -1,0 +1,16 @@
+{
+  "_id": "e7ae7f4b-2288-44d9-9816-2751f729ed85",
+  "event_category": "Payment",
+  "event_name": "Sample event_name for analytics_event",
+  "properties": {
+    "ip_address": "Sample ip_address for object",
+    "location": {
+      "latitude": "7.865805",
+      "longitude": "-148.112246"
+    },
+    "page_url": "Sample page_url for object",
+    "user_agent": "Sample user_agent for object"
+  },
+  "session_id": "Sample session_id for analytics_event",
+  "timestamp": "2025-02-09"
+}

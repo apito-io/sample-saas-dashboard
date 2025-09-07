@@ -1,0 +1,22 @@
+{
+  "_id": "2ba8701c-950f-42c7-bf76-10e2472c2fa5",
+  "billing_info": {
+    "billing_address": "This is sample multiline content.",
+    "billing_email": "Sample billing_email for object",
+    "next_billing_date": "2024-05-11",
+    "payment_method": "Invoice"
+  },
+  "created_at": "2024-08-08",
+  "is_active": false,
+  "name": "organization Name",
+  "plan": "Starter",
+  "settings": {
+    "analytics_enabled": false,
+    "currency": "AUD",
+    "custom_branding": false,
+    "max_users": 725,
+    "timezone": "CET"
+  },
+  "subdomain": "Sample subdomain for organization",
+  "system_dashboard_id": "Sample system_dashboard_id for organization"
+}

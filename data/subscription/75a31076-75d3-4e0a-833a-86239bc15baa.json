@@ -1,0 +1,25 @@
+{
+  "_id": "75a31076-75d3-4e0a-833a-86239bc15baa",
+  "amount": 188.29024250525038,
+  "billing_cycle": "Yearly",
+  "currency": "EUR",
+  "end_date": "2024-08-31",
+  "features": [
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": false,
+      "limit_value": 590
+    },
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": false,
+      "limit_value": 647
+    }
+  ],
+  "plan_name": "Enterprise",
+  "start_date": "2024-06-13",
+  "status": "Suspended",
+  "trial_end_date": "2024-10-12"
+}

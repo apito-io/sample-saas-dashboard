@@ -1,0 +1,25 @@
+{
+  "_id": "6486d41b-fb43-4ea3-b38f-7a4b25e85155",
+  "amount": 824.0189878703502,
+  "billing_cycle": "Yearly",
+  "currency": "AUD",
+  "end_date": "2025-04-17",
+  "features": [
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": false,
+      "limit_value": 238
+    },
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": true,
+      "limit_value": 182
+    }
+  ],
+  "plan_name": "Free",
+  "start_date": "2025-09-07",
+  "status": "Past Due",
+  "trial_end_date": "2024-01-07"
+}

@@ -1,0 +1,22 @@
+{
+  "_id": "79d0dcf7-d4e0-4b50-ada7-5bca47833ddc",
+  "billing_info": {
+    "billing_address": "This is sample multiline content.",
+    "billing_email": "Sample billing_email for object",
+    "next_billing_date": "2024-06-17",
+    "payment_method": "Credit Card"
+  },
+  "created_at": "2025-07-24",
+  "is_active": false,
+  "name": "organization Name",
+  "plan": "Enterprise",
+  "settings": {
+    "analytics_enabled": false,
+    "currency": "GBP",
+    "custom_branding": false,
+    "max_users": 359,
+    "timezone": "PST"
+  },
+  "subdomain": "Sample subdomain for organization",
+  "system_dashboard_id": "Sample system_dashboard_id for organization"
+}

@@ -1,0 +1,70 @@
+# Apito Engine Sample Project Configuration
+# Repository: https://github.com/apito-io/sample-saas-dashboard
+
+name: "SaaS Dashboard"
+slug: "sample-saas-dashboard"
+description: "A comprehensive SaaS analytics dashboard with organization-based multi-tenancy and business intelligence features"
+project_type: "saas" # general | saas
+tenant_model: "organization"
+version: "1.0.0"
+
+# Repository Information
+repository:
+  url: "https://github.com/apito-io/sample-saas-dashboard"
+  organization: "apito-io"
+  assets:
+    cover_image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"
+    icon: "📊"
+    logo: ""
+
+# Schema Information
+schema:
+  models_count: 12
+  relationships_count: 16
+
+# Demo Data
+data:
+  sample_organizations: 5
+  sample_dashboards: 15
+  sample_widgets: 40
+  sample_reports: 20
+  sample_data_sources: 8
+  sample_metrics: 100
+
+# Project Metadata
+metadata:
+  category: "Analytics & Business Intelligence"
+  difficulty: "Advanced"
+  tags:
+    - "dashboard"
+    - "saas"
+    - "analytics"
+    - "business-intelligence"
+    - "metrics"
+    - "reports"
+    - "multi-tenant"
+  keywords:
+    - "saas dashboard"
+    - "business analytics"
+    - "data visualization"
+    - "metrics tracking"
+    - "business intelligence"
+    - "organization dashboard"
+    - "multi-tenant analytics"
+    - "performance monitoring"
+  use_cases:
+    - "Business intelligence platform"
+    - "SaaS metrics dashboard"
+    - "Performance monitoring"
+    - "Customer analytics"
+    - "Multi-client reporting"
+    - "Enterprise analytics"
+  key_features:
+    - "Organization-based multi-tenancy"
+    - "Custom dashboard widgets"
+    - "Real-time metrics tracking"
+    - "Report generation"
+    - "User activity monitoring"
+    - "Data source integration"
+    - "Alert system"
+    - "Role-based access"

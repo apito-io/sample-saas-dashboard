@@ -1,0 +1,17 @@
+{
+  "_id": "16309586-0f80-41e9-ac23-f8324d256699",
+  "avatar": "https://images.unsplash.com/photo-1500000486827?w=800",
+  "email": "test@example.com",
+  "first_name": "Sample first_name for user",
+  "invited_at": "2025-01-21",
+  "is_active": false,
+  "last_login": "2024-05-01",
+  "last_name": "Sample last_name for user",
+  "preferences": {
+    "dashboard_layout": "spacious",
+    "email_notifications": false,
+    "language": "es",
+    "theme": "dark"
+  },
+  "role": "Admin"
+}

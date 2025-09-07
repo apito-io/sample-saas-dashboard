@@ -1,0 +1,721 @@
+{
+  "id": "saas_dashboard",
+  "name": "SaaS Dashboard",
+  "description": "Multi-tenant SaaS application with user management and analytics",
+  "schema": {
+    "models": [
+      {
+        "name": "organization",
+        "fields": [
+          {
+            "identifier": "system_dashboard_id",
+            "description": "An Auto Generated Relation Identifier for Easy Filter Purposes",
+            "input_type": "string",
+            "field_type": "text",
+            "validation": { "hide": true, "unique": true },
+            "serial": 1,
+            "label": "System Dashboard ID",
+            "system_generated": true
+          },
+          {
+            "identifier": "name",
+            "input_type": "string",
+            "field_type": "text",
+            "validation": { "required": true },
+            "serial": 2,
+            "label": "Organization Name"
+          },
+          {
+            "identifier": "subdomain",
+            "input_type": "string",
+            "field_type": "text",
+            "validation": { "required": true, "unique": true },
+            "serial": 3,
+            "label": "Subdomain"
+          },
+          {
+            "identifier": "plan",
+            "input_type": "string",
+            "field_type": "list",
+            "validation": {
+              "required": true,
+              "fixed_list_elements": [
+                "Free",
+                "Starter",
+                "Professional",
+                "Enterprise"
+              ]
+            },
+            "serial": 4,
+            "label": "Subscription Plan"
+          },
+          {
+            "identifier": "settings",
+            "input_type": "object",
+            "field_type": "object",
+            "sub_field_info": [
+              {
+                "identifier": "timezone",
+                "input_type": "string",
+                "field_type": "list",
+                "validation": {
+                  "fixed_list_elements": ["UTC", "EST", "PST", "GMT", "CET"]
+                },
+                "serial": 1,
+                "label": "Timezone",
+                "parent_field": "settings"
+              },
+              {
+                "identifier": "currency",
+                "input_type": "string",
+                "field_type": "list",
+                "validation": {
+                  "fixed_list_elements": ["USD", "EUR", "GBP", "CAD", "AUD"]
+                },
+                "serial": 2,
+                "label": "Currency",
+                "parent_field": "settings"
+              },
+              {
+                "identifier": "max_users",
+                "input_type": "int",
+                "field_type": "number",
+                "validation": { "required": true },
+                "serial": 3,
+                "label": "Maximum Users",
+                "parent_field": "settings"
+              },
+              {
+                "identifier": "analytics_enabled",
+                "input_type": "bool",
+                "field_type": "boolean",
+                "validation": {},
+                "serial": 4,
+                "label": "Analytics Enabled",
+                "parent_field": "settings"
+              },
+              {
+                "identifier": "custom_branding",
+                "input_type": "bool",
+                "field_type": "boolean",
+                "validation": {},
+                "serial": 5,
+                "label": "Custom Branding",
+                "parent_field": "settings"
+              }
+            ],
+            "validation": {},
+            "serial": 5,
+            "label": "Organization Settings"
+          },
+          {
+            "identifier": "billing_info",
+            "input_type": "object",
+            "field_type": "object",
+            "sub_field_info": [
+              {
+                "identifier": "billing_email",
+                "input_type": "string",
+                "field_type": "text",
+                "validation": { "required": true },
+                "serial": 1,
+                "label": "Billing Email",
+                "parent_field": "billing_info"
+              },
+              {
+                "identifier": "billing_address",
+                "input_type": "string",
+                "field_type": "multiline",
+                "validation": {},
+                "serial": 2,
+                "label": "Billing Address",
+                "parent_field": "billing_info"
+              },
+              {
+                "identifier": "payment_method",
+                "input_type": "string",
+                "field_type": "list",
+                "validation": {
+                  "fixed_list_elements": [
+                    "Credit Card",
+                    "Bank Transfer",
+                    "PayPal",
+                    "Invoice"
+                  ]
+                },
+                "serial": 3,
+                "label": "Payment Method",
+                "parent_field": "billing_info"
+              },
+              {
+                "identifier": "next_billing_date",
+                "input_type": "string",
+                "field_type": "date",
+                "validation": {},
+                "serial": 4,
+                "label": "Next Billing Date",
+                "parent_field": "billing_info"
+              }
+            ],
+            "validation": {},
+            "serial": 6,
+            "label": "Billing Information"
+          },
+          {
+            "identifier": "is_active",
+            "input_type": "bool",
+            "field_type": "boolean",
+            "validation": {},
+            "serial": 7,
+            "label": "Active"
+          },
+          {
+            "identifier": "created_at",
+            "input_type": "string",
+            "field_type": "date",
+            "validation": {},
+            "serial": 8,
+            "label": "Created Date"
+          }
+        ],
+        "connections": [
+          {
+            "model": "user",
+            "relation": "has_many",
+            "type": "backward"
+          },
+          {
+            "model": "analytics_event",
+            "relation": "has_many",
+            "type": "backward"
+          },
+          {
+            "model": "subscription",
+            "relation": "has_many",
+            "type": "backward"
+          }
+        ],
+        "has_connections": true
+      },
+      {
+        "name": "user",
+        "fields": [
+          {
+            "identifier": "first_name",
+            "input_type": "string",
+            "field_type": "text",
+            "validation": { "required": true },
+            "serial": 1,
+            "label": "First Name"
+          },
+          {
+            "identifier": "last_name",
+            "input_type": "string",
+            "field_type": "text",
+            "validation": { "required": true },
+            "serial": 2,
+            "label": "Last Name"
+          },
+          {
+            "identifier": "email",
+            "input_type": "string",
+            "field_type": "text",
+            "validation": { "required": true, "unique": true },
+            "serial": 3,
+            "label": "Email"
+          },
+          {
+            "identifier": "role",
+            "input_type": "string",
+            "field_type": "list",
+            "validation": {
+              "required": true,
+              "fixed_list_elements": [
+                "Owner",
+                "Admin",
+                "Manager",
+                "User",
+                "Viewer"
+              ]
+            },
+            "serial": 4,
+            "label": "Role"
+          },
+          {
+            "identifier": "avatar",
+            "input_type": "string",
+            "field_type": "media",
+            "sub_field_info": [
+              {
+                "identifier": "url",
+                "input_type": "string",
+                "field_type": "text",
+                "parent_field": "avatar"
+              },
+              {
+                "identifier": "id",
+                "input_type": "string",
+                "field_type": "text",
+                "parent_field": "avatar"
+              },
+              {
+                "identifier": "file_name",
+                "input_type": "string",
+                "field_type": "text",
+                "parent_field": "avatar"
+              }
+            ],
+            "validation": {},
+            "serial": 5,
+            "label": "Avatar"
+          },
+          {
+            "identifier": "preferences",
+            "input_type": "object",
+            "field_type": "object",
+            "sub_field_info": [
+              {
+                "identifier": "language",
+                "input_type": "string",
+                "field_type": "list",
+                "validation": {
+                  "fixed_list_elements": ["en", "es", "fr", "de", "ja"]
+                },
+                "serial": 1,
+                "label": "Language",
+                "parent_field": "preferences"
+              },
+              {
+                "identifier": "theme",
+                "input_type": "string",
+                "field_type": "list",
+                "validation": {
+                  "fixed_list_elements": ["light", "dark", "auto"]
+                },
+                "serial": 2,
+                "label": "Theme",
+                "parent_field": "preferences"
+              },
+              {
+                "identifier": "email_notifications",
+                "input_type": "bool",
+                "field_type": "boolean",
+                "validation": {},
+                "serial": 3,
+                "label": "Email Notifications",
+                "parent_field": "preferences"
+              },
+              {
+                "identifier": "dashboard_layout",
+                "input_type": "string",
+                "field_type": "list",
+                "validation": {
+                  "fixed_list_elements": ["compact", "comfortable", "spacious"]
+                },
+                "serial": 4,
+                "label": "Dashboard Layout",
+                "parent_field": "preferences"
+              }
+            ],
+            "validation": {},
+            "serial": 6,
+            "label": "User Preferences"
+          },
+          {
+            "identifier": "last_login",
+            "input_type": "string",
+            "field_type": "date",
+            "validation": {},
+            "serial": 7,
+            "label": "Last Login"
+          },
+          {
+            "identifier": "is_active",
+            "input_type": "bool",
+            "field_type": "boolean",
+            "validation": {},
+            "serial": 8,
+            "label": "Active"
+          },
+          {
+            "identifier": "invited_at",
+            "input_type": "string",
+            "field_type": "date",
+            "validation": {},
+            "serial": 9,
+            "label": "Invited Date"
+          }
+        ],
+        "connections": [
+          {
+            "model": "organization",
+            "relation": "has_one",
+            "type": "forward"
+          },
+          {
+            "model": "analytics_event",
+            "relation": "has_many",
+            "type": "backward"
+          }
+        ],
+        "has_connections": true
+      },
+      {
+        "name": "analytics_event",
+        "fields": [
+          {
+            "identifier": "event_name",
+            "input_type": "string",
+            "field_type": "text",
+            "validation": { "required": true },
+            "serial": 1,
+            "label": "Event Name"
+          },
+          {
+            "identifier": "event_category",
+            "input_type": "string",
+            "field_type": "list",
+            "validation": {
+              "required": true,
+              "fixed_list_elements": [
+                "User",
+                "System",
+                "Payment",
+                "Feature",
+                "Error"
+              ]
+            },
+            "serial": 2,
+            "label": "Event Category"
+          },
+          {
+            "identifier": "properties",
+            "input_type": "object",
+            "field_type": "object",
+            "sub_field_info": [
+              {
+                "identifier": "page_url",
+                "input_type": "string",
+                "field_type": "text",
+                "validation": {},
+                "serial": 1,
+                "label": "Page URL",
+                "parent_field": "properties"
+              },
+              {
+                "identifier": "user_agent",
+                "input_type": "string",
+                "field_type": "text",
+                "validation": {},
+                "serial": 2,
+                "label": "User Agent",
+                "parent_field": "properties"
+              },
+              {
+                "identifier": "ip_address",
+                "input_type": "string",
+                "field_type": "text",
+                "validation": {},
+                "serial": 3,
+                "label": "IP Address",
+                "parent_field": "properties"
+              },
+              {
+                "identifier": "location",
+                "input_type": "geo",
+                "field_type": "geo",
+                "validation": {},
+                "serial": 4,
+                "label": "Location",
+                "parent_field": "properties"
+              }
+            ],
+            "validation": {},
+            "serial": 3,
+            "label": "Event Properties"
+          },
+          {
+            "identifier": "timestamp",
+            "input_type": "string",
+            "field_type": "date",
+            "validation": { "required": true },
+            "serial": 4,
+            "label": "Timestamp"
+          },
+          {
+            "identifier": "session_id",
+            "input_type": "string",
+            "field_type": "text",
+            "validation": {},
+            "serial": 5,
+            "label": "Session ID"
+          }
+        ],
+        "connections": [
+          {
+            "model": "organization",
+            "relation": "has_one",
+            "type": "forward"
+          },
+          {
+            "model": "user",
+            "relation": "has_one",
+            "type": "forward"
+          }
+        ],
+        "has_connections": true
+      },
+      {
+        "name": "subscription",
+        "fields": [
+          {
+            "identifier": "plan_name",
+            "input_type": "string",
+            "field_type": "list",
+            "validation": {
+              "required": true,
+              "fixed_list_elements": [
+                "Free",
+                "Starter",
+                "Professional",
+                "Enterprise"
+              ]
+            },
+            "serial": 1,
+            "label": "Plan Name"
+          },
+          {
+            "identifier": "billing_cycle",
+            "input_type": "string",
+            "field_type": "list",
+            "validation": {
+              "required": true,
+              "fixed_list_elements": ["Monthly", "Yearly"]
+            },
+            "serial": 2,
+            "label": "Billing Cycle"
+          },
+          {
+            "identifier": "amount",
+            "input_type": "double",
+            "field_type": "number",
+            "validation": { "required": true },
+            "serial": 3,
+            "label": "Amount"
+          },
+          {
+            "identifier": "currency",
+            "input_type": "string",
+            "field_type": "list",
+            "validation": {
+              "required": true,
+              "fixed_list_elements": ["USD", "EUR", "GBP", "CAD", "AUD"]
+            },
+            "serial": 4,
+            "label": "Currency"
+          },
+          {
+            "identifier": "status",
+            "input_type": "string",
+            "field_type": "list",
+            "validation": {
+              "required": true,
+              "fixed_list_elements": [
+                "Active",
+                "Cancelled",
+                "Past Due",
+                "Suspended",
+                "Trial"
+              ]
+            },
+            "serial": 5,
+            "label": "Status"
+          },
+          {
+            "identifier": "start_date",
+            "input_type": "string",
+            "field_type": "date",
+            "validation": { "required": true },
+            "serial": 6,
+            "label": "Start Date"
+          },
+          {
+            "identifier": "end_date",
+            "input_type": "string",
+            "field_type": "date",
+            "validation": {},
+            "serial": 7,
+            "label": "End Date"
+          },
+          {
+            "identifier": "trial_end_date",
+            "input_type": "string",
+            "field_type": "date",
+            "validation": {},
+            "serial": 8,
+            "label": "Trial End Date"
+          },
+          {
+            "identifier": "features",
+            "input_type": "repeated",
+            "field_type": "repeated",
+            "sub_field_info": [
+              {
+                "identifier": "_id",
+                "input_type": "string",
+                "field_type": "text",
+                "validation": { "hide": true, "unique": true },
+                "serial": 1,
+                "label": "ID",
+                "system_generated": true,
+                "parent_field": "features"
+              },
+              {
+                "identifier": "feature_name",
+                "input_type": "string",
+                "field_type": "text",
+                "validation": { "required": true },
+                "serial": 2,
+                "label": "Feature Name",
+                "parent_field": "features"
+              },
+              {
+                "identifier": "limit_value",
+                "input_type": "int",
+                "field_type": "number",
+                "validation": {},
+                "serial": 3,
+                "label": "Limit Value",
+                "parent_field": "features"
+              },
+              {
+                "identifier": "is_enabled",
+                "input_type": "bool",
+                "field_type": "boolean",
+                "validation": {},
+                "serial": 4,
+                "label": "Enabled",
+                "parent_field": "features"
+              }
+            ],
+            "validation": {},
+            "serial": 9,
+            "label": "Features"
+          }
+        ],
+        "connections": [
+          {
+            "model": "organization",
+            "relation": "has_one",
+            "type": "forward"
+          }
+        ],
+        "has_connections": true
+      }
+    ]
+  },
+  "project_type": 1,
+  "project_secret_key": "SAAS_DASHBOARD_SECRET_KEY_456789",
+  "tenant_model_name": "organization",
+  "per_tenant_separate_database": false,
+  "settings": {
+    "locals": ["en", "es", "fr", "de"],
+    "default_locale": "en",
+    "system_graphql_hooks": true,
+    "enable_revision_history": true
+  },
+  "roles": {
+    "admin": {
+      "system_generated": true,
+      "is_admin": true
+    },
+    "org_owner": {
+      "api_permissions": {
+        "user": {
+          "read": "all",
+          "create": "all",
+          "update": "all",
+          "delete": "all"
+        },
+        "analytics_event": {
+          "read": "all",
+          "create": "all",
+          "update": "all",
+          "delete": "all"
+        },
+        "subscription": {
+          "read": "all",
+          "create": "all",
+          "update": "all",
+          "delete": "all"
+        }
+      }
+    },
+    "org_admin": {
+      "api_permissions": {
+        "user": {
+          "read": "all",
+          "create": "all",
+          "update": "all",
+          "delete": "none"
+        },
+        "analytics_event": {
+          "read": "all",
+          "create": "all",
+          "update": "none",
+          "delete": "none"
+        },
+        "subscription": {
+          "read": "all",
+          "create": "none",
+          "update": "none",
+          "delete": "none"
+        }
+      }
+    },
+    "org_manager": {
+      "api_permissions": {
+        "user": {
+          "read": "all",
+          "create": "none",
+          "update": "none",
+          "delete": "none"
+        },
+        "analytics_event": {
+          "read": "all",
+          "create": "all",
+          "update": "none",
+          "delete": "none"
+        },
+        "subscription": {
+          "read": "all",
+          "create": "none",
+          "update": "none",
+          "delete": "none"
+        }
+      }
+    },
+    "org_user": {
+      "api_permissions": {
+        "user": {
+          "read": "own",
+          "create": "none",
+          "update": "own",
+          "delete": "none"
+        },
+        "analytics_event": {
+          "read": "own",
+          "create": "all",
+          "update": "none",
+          "delete": "none"
+        },
+        "subscription": {
+          "read": "none",
+          "create": "none",
+          "update": "none",
+          "delete": "none"
+        }
+      }
+    }
+  }
+}

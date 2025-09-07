@@ -1,0 +1,22 @@
+{
+  "_id": "03007956-1eb8-486b-be85-fc201de9ad09",
+  "billing_info": {
+    "billing_address": "This is sample multiline content.",
+    "billing_email": "Sample billing_email for object",
+    "next_billing_date": "2024-04-05",
+    "payment_method": "Bank Transfer"
+  },
+  "created_at": "2025-04-14",
+  "is_active": false,
+  "name": "Test organization",
+  "plan": "Professional",
+  "settings": {
+    "analytics_enabled": true,
+    "currency": "AUD",
+    "custom_branding": true,
+    "max_users": 771,
+    "timezone": "PST"
+  },
+  "subdomain": "Sample subdomain for organization",
+  "system_dashboard_id": "Sample system_dashboard_id for organization"
+}

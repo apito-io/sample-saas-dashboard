@@ -1,0 +1,31 @@
+{
+  "_id": "ec41472b-0b0b-4880-8199-7e97f1d385e4",
+  "amount": 663.7904921218786,
+  "billing_cycle": "Monthly",
+  "currency": "AUD",
+  "end_date": "2024-05-14",
+  "features": [
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": true,
+      "limit_value": 922
+    },
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": true,
+      "limit_value": 755
+    },
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": false,
+      "limit_value": 201
+    }
+  ],
+  "plan_name": "Professional",
+  "start_date": "2024-03-01",
+  "status": "Past Due",
+  "trial_end_date": "2025-07-20"
+}

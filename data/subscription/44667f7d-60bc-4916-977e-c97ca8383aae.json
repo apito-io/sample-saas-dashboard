@@ -1,0 +1,19 @@
+{
+  "_id": "44667f7d-60bc-4916-977e-c97ca8383aae",
+  "amount": 217.28356865700883,
+  "billing_cycle": "Monthly",
+  "currency": "CAD",
+  "end_date": "2024-02-09",
+  "features": [
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": true,
+      "limit_value": 338
+    }
+  ],
+  "plan_name": "Starter",
+  "start_date": "2024-05-23",
+  "status": "Active",
+  "trial_end_date": "2025-07-21"
+}

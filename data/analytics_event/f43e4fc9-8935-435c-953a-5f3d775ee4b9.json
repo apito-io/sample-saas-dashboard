@@ -1,0 +1,16 @@
+{
+  "_id": "f43e4fc9-8935-435c-953a-5f3d775ee4b9",
+  "event_category": "Error",
+  "event_name": "Sample event_name for analytics_event",
+  "properties": {
+    "ip_address": "Sample ip_address for object",
+    "location": {
+      "latitude": "-30.863633",
+      "longitude": "-40.162726"
+    },
+    "page_url": "Sample page_url for object",
+    "user_agent": "Sample user_agent for object"
+  },
+  "session_id": "Sample session_id for analytics_event",
+  "timestamp": "2025-05-19"
+}

@@ -1,0 +1,116 @@
+{
+  "03007956-1eb8-486b-be85-fc201de9ad09": {
+    "analytics_event": {
+      "ids": [
+        "977f8660-ae5e-41e9-be51-0523d5026f05"
+      ],
+      "relation_type": "has_many"
+    },
+    "subscription": {
+      "ids": [
+        "ec41472b-0b0b-4880-8199-7e97f1d385e4"
+      ],
+      "relation_type": "has_many"
+    },
+    "user": {
+      "ids": [
+        "5e4490e3-3e85-43bc-bb23-aa8442f21a65"
+      ],
+      "relation_type": "has_many"
+    }
+  },
+  "03eda52d-aac2-46f8-9d26-3bda715005c0": {
+    "analytics_event": {
+      "ids": [
+        "968bcd88-2fe4-4c95-8d79-4db62d767f46",
+        "c9844253-342f-4243-8736-66b7821baa37",
+        "827329a9-79b6-4dba-aa7f-988491505b59"
+      ],
+      "relation_type": "has_many"
+    },
+    "subscription": {
+      "ids": [
+        "8ac35389-ae3f-4c76-836c-441601963244",
+        "ba2ea4d3-b54d-4e28-8b57-041c031d0aa3",
+        "b5379559-ca53-440d-b01e-3a9ac603a4b6"
+      ],
+      "relation_type": "has_many"
+    },
+    "user": {
+      "ids": [
+        "b21c8d75-6b32-4fba-b925-2d9a0e0e4421",
+        "94eb581d-db2f-4292-bde8-0d926d553051",
+        "5e4490e3-3e85-43bc-bb23-aa8442f21a65"
+      ],
+      "relation_type": "has_many"
+    }
+  },
+  "16630a0d-6c60-4202-b912-5f134f4dc72a": {
+    "analytics_event": {
+      "ids": [
+        "b901b782-8443-47d9-b398-f0f1a97367af"
+      ],
+      "relation_type": "has_many"
+    },
+    "subscription": {
+      "ids": [
+        "12a9724d-5972-4404-9fbe-a97faf7e4676",
+        "bfa1697a-bc61-4f9a-b768-5201967cd6f3"
+      ],
+      "relation_type": "has_many"
+    },
+    "user": {
+      "ids": [
+        "5e4490e3-3e85-43bc-bb23-aa8442f21a65",
+        "a46e6016-cfbc-4a1c-93e4-a442f6a150f2"
+      ],
+      "relation_type": "has_many"
+    }
+  },
+  "2ba8701c-950f-42c7-bf76-10e2472c2fa5": {
+    "analytics_event": {
+      "ids": [
+        "827329a9-79b6-4dba-aa7f-988491505b59",
+        "977f8660-ae5e-41e9-be51-0523d5026f05"
+      ],
+      "relation_type": "has_many"
+    },
+    "subscription": {
+      "ids": [
+        "885b399c-0ec9-4c93-974e-e51f7df3d536",
+        "2fcfe0b4-b394-4460-94f1-cff4c5fa45c6"
+      ],
+      "relation_type": "has_many"
+    },
+    "user": {
+      "ids": [
+        "04dca926-9b89-426a-ada6-0ed87a75b3f6",
+        "1e9b2c64-31d0-4c7f-a89b-70cea26397c7"
+      ],
+      "relation_type": "has_many"
+    }
+  },
+  "79d0dcf7-d4e0-4b50-ada7-5bca47833ddc": {
+    "analytics_event": {
+      "ids": [
+        "977f8660-ae5e-41e9-be51-0523d5026f05",
+        "04ab60a7-96f6-481b-8655-5eb5fa9a9462",
+        "381a6c68-a05e-49e0-883a-94855f866df7"
+      ],
+      "relation_type": "has_many"
+    },
+    "subscription": {
+      "ids": [
+        "32e51aee-de24-4342-a27e-f7da67bc5c11"
+      ],
+      "relation_type": "has_many"
+    },
+    "user": {
+      "ids": [
+        "17794b6d-8588-4fc5-989b-7fc7123ae6be",
+        "16309586-0f80-41e9-ac23-f8324d256699"
+      ],
+      "relation_type": "has_many"
+    }
+  }
+}

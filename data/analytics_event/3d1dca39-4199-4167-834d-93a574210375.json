@@ -1,0 +1,16 @@
+{
+  "_id": "3d1dca39-4199-4167-834d-93a574210375",
+  "event_category": "System",
+  "event_name": "Sample event_name for analytics_event",
+  "properties": {
+    "ip_address": "Sample ip_address for object",
+    "location": {
+      "latitude": "-59.544904",
+      "longitude": "-97.719020"
+    },
+    "page_url": "Sample page_url for object",
+    "user_agent": "Sample user_agent for object"
+  },
+  "session_id": "Sample session_id for analytics_event",
+  "timestamp": "2024-06-02"
+}

@@ -1,0 +1,25 @@
+{
+  "_id": "b328daa2-8085-4f38-b290-18ec9b0b28f5",
+  "amount": 223.58028441825317,
+  "billing_cycle": "Yearly",
+  "currency": "GBP",
+  "end_date": "2024-10-29",
+  "features": [
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": false,
+      "limit_value": 551
+    },
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": false,
+      "limit_value": 867
+    }
+  ],
+  "plan_name": "Enterprise",
+  "start_date": "2025-01-07",
+  "status": "Trial",
+  "trial_end_date": "2024-12-17"
+}

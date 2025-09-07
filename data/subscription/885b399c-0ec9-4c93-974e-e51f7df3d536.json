@@ -1,0 +1,31 @@
+{
+  "_id": "885b399c-0ec9-4c93-974e-e51f7df3d536",
+  "amount": 525.8550657196447,
+  "billing_cycle": "Yearly",
+  "currency": "GBP",
+  "end_date": "2025-02-02",
+  "features": [
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": true,
+      "limit_value": 377
+    },
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": false,
+      "limit_value": 957
+    },
+    {
+      "_id": "Sample _id for array",
+      "feature_name": "Sample feature_name for array",
+      "is_enabled": true,
+      "limit_value": 782
+    }
+  ],
+  "plan_name": "Professional",
+  "start_date": "2024-11-10",
+  "status": "Past Due",
+  "trial_end_date": "2024-08-20"
+}
