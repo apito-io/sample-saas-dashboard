@@ -1,6 +1,6 @@
 # SaaS Dashboard - Apito Engine Template
 
-📊 **A comprehensive SaaS analytics dashboard with organization-based multi-tenancy and business intelligence features**
+📊 **A SaaS analytics dashboard with organization-based multi-tenancy and business intelligence features**
 
 [![Apito Engine](https://img.shields.io/badge/Apito-Engine-blue?style=flat&logo=graphql)](https://apito.io)
 [![Project Type](https://img.shields.io/badge/Project%20Type-SaaS-red?style=flat)](#project-type)
